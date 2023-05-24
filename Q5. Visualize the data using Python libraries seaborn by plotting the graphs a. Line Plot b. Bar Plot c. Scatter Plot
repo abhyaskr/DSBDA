@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 # Line Plot
 x = [1, 2, 3, 4, 5]
 y = [2, 4, 6, 8, 10]
-sns.lineplot(x, y)
+sns.lineplot(x=x, y=y)
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
 plt.title('Line Plot')
@@ -14,7 +14,7 @@ _______________________________________________________________________________
 # Bar Plot
 x = ['A', 'B', 'C', 'D']
 y = [10, 5, 8, 12]
-sns.barplot(x, y)
+sns.barplot(x=x, y=y)
 plt.xlabel('Categories')
 plt.ylabel('Values')
 plt.title('Bar Plot')
@@ -23,7 +23,7 @@ _________________________________________________________
 # Scatter Plot
 x = [1, 2, 3, 4, 5]
 y = [2, 4, 6, 8, 10]
-sns.scatterplot(x, y)
+sns.scatterplot(x=x, y=y)
 plt.xlabel('X-axis')
 plt.ylabel('Y-axis')
 plt.title('Scatter Plot')
