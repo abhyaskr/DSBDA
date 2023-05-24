@@ -1,0 +1,22 @@
+#a. Create data subsets
+import pandas as pd
+df = pd.read_csv('C:/Users/rutik/Desktop/pseudo_facebook.csv')
+subset1  = df[['userid','age','dob_day']];
+subset2 = df[['gender','tenure']]
+print(subset1)
+print(subset2)
+
+#b. Merge Data
+import pandas as pd
+
+# Read the first dataset
+df1 = pd.read_csv('C:/Users/rutik/Desktop/pseudo_facebook.csv')
+
+# Read the second dataset
+df2 = pd.read_csv('C:/Users/rutik/Desktop/data.csv')
+
+# Merge the datasets based on a common column
+merged_data = pd.merge(df1, df2, on='userid')  # Replace 'userid' with the actual common column name
+
+# Print the merged data
+print(merged_data.head())
