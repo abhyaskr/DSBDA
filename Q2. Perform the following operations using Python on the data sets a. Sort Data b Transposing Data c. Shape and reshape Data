@@ -33,3 +33,6 @@ data_shape = df.shape
 # Print the shape
 print(data_shape)
 print(df.size)
+import numpy as np
+arr = np.array([1,2,3,4,5,6,7,8,9,10])
+arr.reshape(5,2)
