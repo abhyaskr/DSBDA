@@ -6,6 +6,7 @@ subset2 = df[['gender','tenure']]
 print(subset1)
 print(subset2)
 
+_____________________________________________________________________________________________________________________
 #b. Merge Data
 import pandas as pd
 
