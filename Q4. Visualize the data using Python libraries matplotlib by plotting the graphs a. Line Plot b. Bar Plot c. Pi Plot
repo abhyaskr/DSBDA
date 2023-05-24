@@ -1,0 +1,28 @@
+import matplotlib.pyplot as plt
+
+# Line Plot
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
+plt.plot(x, y)
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Line Plot')
+plt.show()
+
+____________________________________________________________________________
+# Bar Plot
+x = ['A', 'B', 'C', 'D']
+y = [10, 5, 8, 12]
+plt.bar(x, y)
+plt.xlabel('Categories')
+plt.ylabel('Values')
+plt.title('Bar Plot')
+plt.show()
+____________________________________________________________________________________
+# Pie Plot
+labels = ['A', 'B', 'C', 'D']
+sizes = [15, 30, 45, 10]
+plt.pie(sizes, labels=labels, autopct='%1.1f%%')
+plt.title('Pie Plot')
+plt.axis('equal')
+plt.show()
