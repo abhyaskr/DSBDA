@@ -1,7 +1,7 @@
 #a. Create data subsets
 import pandas as pd
 df = pd.read_csv('C:/Users/rutik/Desktop/pseudo_facebook.csv')
-subset1  = df[['userid','age','dob_day']];
+subset1  = df[['userid','age','dob_day']]
 subset2 = df[['gender','tenure']]
 print(subset1)
 print(subset2)
