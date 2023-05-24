@@ -1,0 +1,55 @@
+import pandas as pd
+
+df = pd.read_csv('C:/Users/rutik/Desktop/pseudo_facebook.csv')
+
+# Select only the numeric columns
+numeric_columns = df.select_dtypes(include='number')
+
+# Filling missing values with mean
+df_filled_mean = df.fillna(numeric_columns.mean())
+
+# Filling missing values with median
+df_filled_median = df.fillna(numeric_columns.median())
+
+# Print the filled DataFrames
+print("Filled with Mean:")
+print(df_filled_mean)
+
+print("\nFilled with Median:")
+print(df_filled_median)
+
+
+import pandas as pd
+
+
+# Create a new column indicating missing values
+df['age_imputed'] = df['age'].isna().astype(int)
+
+# Fill missing values with a new column
+df['age_imputed_value'] = df['age'].fillna(df['age'].mean())
+
+# Print the updated DataFrame
+print(df)
+
+
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+
+
+
+# Separate the data into features (X) and target (y)
+X = df.dropna().drop('age', axis=1)
+y = df.dropna()['age']
+
+# Create a new DataFrame for missing values
+missing_data = df[df['age'].isna()].drop('age', axis=1)
+
+# Fit a linear regression model
+model = LinearRegression()
+model.fit(X, y)
+
+# Predict the missing values
+imputed_values = model.predict(missing_data)
+
+# Fill the missing values with the predicted values
+df.loc[df['age'].isna(), 'age'] = imputed_values
