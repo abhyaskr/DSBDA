@@ -1,0 +1,35 @@
+#a. Sort Data
+
+import pandas as pd
+
+# Read the dataset
+df = pd.read_csv('C:/Users/rutik/Desktop/pseudo_facebook.csv')
+# Sort the data in descending order
+sorted_data = df.sort_values('age')  # Replace 'column_name' with the actual column name you want to sort by
+
+# Print the sorted data
+print(sorted_data.head())
+_________________________________________________________________________________________________________________________________
+#b Transposing Data
+import pandas as pd
+
+# Read the dataset
+df = pd.read_csv('C:/Users/rutik/Desktop/pseudo_facebook.csv')
+# Transpose the data
+transposed_data = df.T
+
+# Print the transposed data
+print(transposed_data.head())
+______________________________________________________________________________________________________________________________________________
+#c. Shape and reshape Data
+import pandas as pd
+
+# Read the dataset
+df = pd.read_csv('C:/Users/rutik/Desktop/pseudo_facebook.csv')
+
+# Get the shape of the data
+data_shape = df.shape
+
+# Print the shape
+print(data_shape)
+print(df.size)
